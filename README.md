@@ -1,6 +1,6 @@
 # GAET_PU
 
-This repository contains the R code and data used in the paper on GAET-based methods for positive-unlabeled (PU) data analysis.
+This repository contains the R code and data used in the paper on GAET-based methods for PU data analysis.
 
 The repository includes simulation studies, real-data analyses, and semi-synthetic data experiments.
 
