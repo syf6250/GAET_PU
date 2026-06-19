@@ -88,16 +88,16 @@ sum.bt.addEM <- function(res.l,pi.true=0.4,RUN,nu.seq){
   conv.status <- sapply(res.l, function(x){x$conv})
   allout[,1] <- mean(conv.status)
   
-  piest <- sapply(res.l, function(x){x$pi})
+  piest <- unlist(lapply(res.l, function(x){x$pi}))
   allout[,2] <- mean(piest,na.rm=T)-pi.true
   allout[,3] <- sd(piest,na.rm=T)
   allout[,4] <- allout[,2]^2+allout[,3]^2
   
-  FP <- sapply(res.l, function(x){x$classperf[,1]});allout[,5] <- mean(FP,na.rm=T)
-  FN <- sapply(res.l, function(x){x$classperf[,2]});allout[,6] <- mean(FN,na.rm=T)
-  Err <- sapply(res.l, function(x){x$classperf[,3]});allout[,7] <- mean(Err,na.rm=T)
+  FP <- unlist(lapply(res.l, function(x){x$classperf[,1]}));allout[,5] <- mean(FP,na.rm=T)
+  FN <- unlist(lapply(res.l, function(x){x$classperf[,2]}));allout[,6] <- mean(FN,na.rm=T)
+  Err <- unlist(lapply(res.l, function(x){x$classperf[,3]}));allout[,7] <- mean(Err,na.rm=T)
   
-  init.methods <- sapply(res.l, function(x){x$initMethd})
+  init.methods <- unlist(lapply(res.l, function(x){x$initMethd}))
   
   tune.table <- table(factor(sapply(res.l,function(x){x$tuneid}),levels = 1:length(nu.seq)))
   tune.df <- data.frame(tune=nu.seq,frq=as.numeric(tune.table/RUN))
@@ -175,17 +175,7 @@ for(kk in 1:length(nseq)){
   cover.logit <- rbind(cover.logit, cover.prop(sumout$pi.all.logit,sumout$bootpi.logit,pi.true=log(pi.true/(1-pi.true))))
 }
 proc.time() - ptm
+
 print(cover.logit[,3])
-
-
-
-
-
-
-
-
-
-
-
-
-
+#print(perf.all$conv)
+#save(tosave,file="tab2_DRlin_btuneF_Run2000.Rdata")
