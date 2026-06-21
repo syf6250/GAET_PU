@@ -41,7 +41,7 @@ EM.btfun <- function(run,n0,n,nu.seq,B,nodes,weights,bsval,
   aicres <- AIC.addDR(nu.seq,seed,pdata,udata,maxit=1000,thres=1e-4,
                       pi.true=pi.true,k=10,ord=3,ord.pen=2,eval.df=eval.df,
                       Fvalout=T,initinput=NULL)
-  if(isFALSE(aicres$conv)){return(list(conv=F,tuneid=NA,initMethd=NA,
+  if(isFALSE(aicres$conv)){return(list(conv=F,tuneid=NA,initMethd=NA,pi=NA,
                                        bsumsq=NA,bBoot=rep(NA,4),testout05=NA,testout01=NA))}
   
   out <- list(tuneid=aicres$tuneid,tune=nu.seq[aicres$tuneid],
