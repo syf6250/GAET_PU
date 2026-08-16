@@ -1,0 +1,19 @@
+Package: PUEM
+Type: Package
+Title: PUEM (Positive and Unlabeled learning under double exponential tilting model)
+Version: 0.1.0
+Authors@R:
+           c(person(given="Siyan", family="Liu", role=c("aut","cre"), email="syliuecnu@163.com"),
+             person(given="Chi-Kuang", family="Yeh", role=c("aut")),
+             person(given="Xin", family="Zhang", role=c("aut")),
+             person(given="Qinglong", family="Tian", role=c("aut","ths","ctb")), 
+             person(given="Pengfei", family="Li", role=c("aut","ths","ctb")))
+Maintainer: Siyan Liu <syliuecnu@163.com>
+Description: Perform DETM for Positive and Unlabeled data. 
+   DETM is a comprehensive framework for addressing the challenges of statistical inference and classification for positive-unlabeled (PU) data, accommodating both common distribution (CD) and different distribution (DD) scenarios.
+Depends: R (>= 4.4.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Imports: 
+    glmnet
