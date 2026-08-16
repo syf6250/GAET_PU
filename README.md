@@ -50,7 +50,20 @@ R scripts for real-data applications.
 Survey data are publicly available at:  
 https://search.gesis.org/research_data/ZA5688
 
-Other auxiliary files in this folder contain necessary supporting functions.
+Other auxiliary files in this folder contain necessary supporting functions. 
+
+---
+
+## DETM/
+
+R scripts for Tables S.7 and S.8.
+
+- `Liu_Set1.R` – Setting 1 in Tables S.7 and S.8
+- `Liu_Set2.R` – Setting 2 in Tables S.7 and S.8
+- `Liu_Set3.R` – Setting 3 in Tables S.7 and S.8
+
+Other auxiliary files in this folder contain necessary supporting functions. The folder PUEM comes from the supplementary file of https://www.tandfonline.com/doi/abs/10.1080/01621459.2025.2474266
+
 
 ---
 
