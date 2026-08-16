@@ -35,6 +35,7 @@ R scripts for simulation experiments corresponding to the tables and figures in 
 - results/ - a folder containing outputs for `Tab1_Set1.R`, `Tab1_Set2.R`, `Tab1_Set3.R`, `FigS1S2_Set1.R`, `FigS1S2_Set2.R`, and `FigS1S2_Set3.R`.
   
 Other auxiliary files in this folder contain necessary supporting functions. 
+
 To produce Tables S.3, S.4 and S.5, change "pi.true <- 0.4" in all `Tab?_Set?.R` into "pi.true <- 0.1".
 
 ---
@@ -62,10 +63,10 @@ Datasets:
 - `spambase.data`
 
 Scripts and outputs:
-- `TabS4_wilt.R` – Table S4 (wilt data)  
-- `TabS4_spam.R` – Table S4 (spambase data)  
-- `TabS5.R` – Table S5  
-- `TabS6.R` – Table S6  
+- `TabS9_wilt.R` – Table S9 (wilt data)  
+- `TabS9_spam.R` – Table S9 (spambase data)  
+- `TabS10.R` – Table S10  
+- `TabS11.R` – Table S11  
 
 Some files in this directory contain auxiliary functions required for computation.
 
